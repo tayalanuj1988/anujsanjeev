@@ -17,6 +17,13 @@ public class HotelModel implements Serializable
     private String cityId;
     private String xid;
     private String keyImageUrl;
+    private Double latitude;
+    private Double longitude;
+    private String minimumPrice;
+    private String name;
+    private String stateName;
+    private String shortDescription;
+    private String id;
 
     public String getAddress() {
         return address;
@@ -137,12 +144,4 @@ public class HotelModel implements Serializable
     public void setId(String id) {
         this.id = id;
     }
-
-    private Double latitude;
-    private Double longitude;
-    private String minimumPrice;
-    private String name;
-    private String stateName;
-    private String shortDescription;
-    private String id;
 }

@@ -61,7 +61,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         //creating a service for adapter with our GET class
         Api_Interface git = restAdapter.create(Api_Interface.class);
 
-        git.getPointOfInterestedForACity("hotel", "2", "10", new Callback<GetHotelData>() {
+        git.getPointOfInterestedForACity("Places To Visit,Hotel,Things To Do", "1", "100", new Callback<GetHotelData>() {
             @Override
             public void success(GetHotelData list, Response response) {
                 //  Utils.cancelProgressDialog(mProgressDialog);

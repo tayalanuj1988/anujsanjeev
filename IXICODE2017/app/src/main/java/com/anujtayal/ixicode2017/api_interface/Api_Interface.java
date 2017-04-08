@@ -19,8 +19,8 @@ public interface Api_Interface {
     @GET("/action/content/zeus/autocomplete?searchFor=tpAutoComplete&neCategories=City")
     public void getListOfSuggestedCity(@Query("query") String query, Callback<ArrayList<CityModel>> response);
 
-    @GET("/api/v3/namedentities/city/503b2a90e4b032e338f13ba5/categories?apiKey=ixicode!2$")
-    public void getPointOfInterestedForACity(@Query("type") String type, @Query("skip") String skip, @Query("limit") String limit, Callback<GetHotelData> response);
+    @GET("/api/v3/namedentities/city/{cityId}/categories?apiKey=ixicode!2$")
+    public void getPointOfInterestedForACity(@Path("cityId") String entityId, @Query("type") String type, @Query("skip") String skip, @Query("limit") String limit, Callback<GetHotelData> response);
 
     @GET("/api/v3/namedentities/id/{entityId}?apiKey=ixicode!2$")
     public void getEntityDetail(@Path("entityId") String entityId, Callback<GetEntityDetailModel> response);
