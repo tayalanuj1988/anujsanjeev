@@ -4,7 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.anujtayal.ixicode2017.activity.ChooseDestinationActivity">
+
+    <TextView
+        android:id="@+id/currentLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/black" />
 
     <com.mobisys.android.autocompleteview.AutoCompleteView
         android:id="@+id/auto_text_2"
@@ -21,6 +29,6 @@
         android:textSize="18sp"
         app:autocompleteUrl="http://build2.ixigo.com/action/content/zeus/autocomplete?searchFor=tpAutoComplete&amp;neCategories=City&amp;query="
         app:modelClass="com.anujtayal.ixicode2017.bean.CityModel"
-        app:rowLayout="@layout/row_city"/>
+        app:rowLayout="@layout/row_city" />
 
 </LinearLayout>

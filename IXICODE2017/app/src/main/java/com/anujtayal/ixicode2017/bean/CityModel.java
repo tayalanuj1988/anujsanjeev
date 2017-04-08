@@ -19,6 +19,14 @@ public class CityModel implements Serializable
     private String cn;
     private boolean en;
     private String st;
+    private String co;
+    private Integer _oid;
+    private String eid;
+    private String cid;
+    private boolean useNLP;
+    private double lat;
+    private double lon;
+    private Integer xid;
 
     @ViewId(id= R.id.name)
     public String getText() {
@@ -148,13 +156,4 @@ public class CityModel implements Serializable
     public void setXid(Integer xid) {
         this.xid = xid;
     }
-
-    private String co;
-    private Integer _oid;
-    private String eid;
-    private String cid;
-    private boolean useNLP;
-    private double lat;
-    private double lon;
-    private Integer xid;
 }
