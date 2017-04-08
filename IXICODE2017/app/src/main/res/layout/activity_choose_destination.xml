@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.anujtayal.ixicode2017.activity.ChooseDestinationActivity">
+
+    <com.mobisys.android.autocompleteview.AutoCompleteView
+        android:id="@+id/auto_text_2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:hint="@string/enter_your_destination"
+        android:paddingLeft="10dp"
+        android:paddingRight="32dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:autocompleteUrl="http://build2.ixigo.com/action/content/zeus/autocomplete?searchFor=tpAutoComplete&amp;neCategories=City&amp;query="
+        app:modelClass="com.anujtayal.ixicode2017.bean.CityModel"
+        app:rowLayout="@layout/row_city"/>
+
+</LinearLayout>
