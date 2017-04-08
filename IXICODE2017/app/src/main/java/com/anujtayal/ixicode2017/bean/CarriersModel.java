@@ -124,8 +124,17 @@ public class CarriersModel implements Serializable
     }
 
     private String price;
-    //private ArrayList<String> tfList;
+    private ArrayList<TrainListModel> tfList;
     private ArrayList<String> availableClassList;
+
+    public ArrayList<TrainListModel> getTfList() {
+        return tfList;
+    }
+
+    public void setTfList(ArrayList<TrainListModel> tfList) {
+        this.tfList = tfList;
+    }
+
     private ArrayList<String> busAmenitiesList;
     private String commaSeparatedDOO;
 

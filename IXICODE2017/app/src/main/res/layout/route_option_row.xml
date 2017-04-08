@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_modeViaString"
+        android:padding="@dimen/five_dp"
+        android:textSize="@dimen/fifteen_sp"
+        android:maxLines="2"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_total_time"
+        android:padding="@dimen/five_dp"
+        android:textSize="@dimen/fifteen_sp"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_total_price"
+        android:padding="@dimen/five_dp"
+        android:textSize="@dimen/fifteen_sp"
+        android:maxLines="2"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_no_of_mode_count"
+        android:padding="@dimen/five_dp"
+        android:textSize="@dimen/fifteen_sp"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_first_mode"
+        android:padding="@dimen/five_dp"
+        android:textSize="@dimen/fifteen_sp"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

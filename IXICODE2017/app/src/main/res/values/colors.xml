@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="toolbar_bg_color">#35a7ff</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="home_restaurant_divider_color">#cacaca</color>
+
+
+
 </resources>

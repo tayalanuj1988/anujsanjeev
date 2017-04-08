@@ -17,11 +17,11 @@ import com.anujtayal.ixicode2017.utils.SimpleDividerItemDecoration;
 
 import java.util.ArrayList;
 
-public class A2BRootsActivity extends BaseActivity {
-    private String originCityId, destinationCityId;
+public class RouteDetailActivity extends BaseActivity
+{
     private Toolbar toolbar;
     private TextView tvTbTitle;
-    private RecyclerView recyclerView;
+    private TextView tv_mode_option;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -31,14 +31,9 @@ public class A2BRootsActivity extends BaseActivity {
 
         setTitle("");
 
-//        originCityId = getIntent().getStringExtra(AppConstant.ORIGINCITYID);
-//        destinationCityId = getIntent().getStringExtra(AppConstant.DESTINATIONCITYID);
-
-        originCityId = "1075798";
-        destinationCityId = "1075379";
-
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         tvTbTitle = (TextView) findViewById(R.id.tvTbTitle);
+        tv_mode_option = (TextView) findViewById(R.id.tv_mode_option);
 
         if (toolbar != null)
         {
@@ -57,26 +52,28 @@ public class A2BRootsActivity extends BaseActivity {
             }
         });
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycleView);
-        LinearLayoutManager mLinearLayoutManagerHorizontal = new LinearLayoutManager(this);
-        mLinearLayoutManagerHorizontal.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(mLinearLayoutManagerHorizontal);
-        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(getResources()));
+        tv_mode_option.setText("");
 
-        callA2BApi(originCityId, destinationCityId, AppConstant.API_5_A2B);
+//        recyclerView = (RecyclerView) findViewById(R.id.recycleView);
+//        LinearLayoutManager mLinearLayoutManagerHorizontal = new LinearLayoutManager(this);
+//        mLinearLayoutManagerHorizontal.setOrientation(LinearLayoutManager.VERTICAL);
+//        recyclerView.setLayoutManager(mLinearLayoutManagerHorizontal);
+//        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(getResources()));
+
+//        callA2BApi(originCityId, destinationCityId, AppConstant.API_5_A2B);
     }
 
     @Override
     protected void performApiSuccessCallback(Bundle bundle, String REQUEST_CODE)
     {
-        if (REQUEST_CODE.equalsIgnoreCase(AppConstant.API_5_A2B))
-        {
-            GetA2BModel model = (GetA2BModel) bundle.getSerializable(AppConstant.API_5_A2B);
-            A2BModel _model = model.getData();
-            ArrayList<RouteModel> _root_model = _model.getRoutes();
-
-            RouteOptionAdapter adapter = new RouteOptionAdapter(A2BRootsActivity.this,_root_model);
-            recyclerView.setAdapter(adapter);
-        }
+//        if (REQUEST_CODE.equalsIgnoreCase(AppConstant.API_5_A2B))
+//        {
+//            GetA2BModel model = (GetA2BModel) bundle.getSerializable(AppConstant.API_5_A2B);
+//            A2BModel _model = model.getData();
+//            ArrayList<RouteModel> _root_model = _model.getRoutes();
+//
+//            RouteOptionAdapter adapter = new RouteOptionAdapter(RouteDetailActivity.this,_root_model);
+//            recyclerView.setAdapter(adapter);
+//        }
     }
 }

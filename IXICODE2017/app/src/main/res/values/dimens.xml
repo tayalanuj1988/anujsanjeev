@@ -1,0 +1,17 @@
+<resources>
+   <dimen name="tool_bar_max_height">45dp</dimen>
+    <dimen name="twenty_three_sp">23sp</dimen>
+
+ <dimen name="one_dp">1dp</dimen>
+
+ <dimen name="five_dp">5dp</dimen>
+    <dimen name="five_sp">5sp</dimen>
+    <dimen name="ten_sp">10sp</dimen>
+    <dimen name="tweleve_sp">12sp</dimen>
+    <dimen name="fifteen_sp">15sp</dimen>
+
+ <dimen name="one_sp">15sp</dimen>
+ <dimen name="one_fourth_dp">.25sp</dimen>
+
+
+</resources>
