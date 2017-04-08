@@ -9,7 +9,6 @@ import android.widget.Toast;
 import com.anujtayal.ixicode2017.R;
 import com.anujtayal.ixicode2017.api_interface.Api_Interface;
 import com.anujtayal.ixicode2017.bean.CityModel;
-import com.anujtayal.ixicode2017.bean.GetListOfSuggestedCities;
 import com.anujtayal.ixicode2017.utils.AppConstant;
 import com.google.gson.Gson;
 import com.mobisys.android.autocompleteview.AutoCompleteView;
@@ -35,7 +34,6 @@ public class ChooseDestinationActivity extends AppCompatActivity {
             @Override
             public ArrayList<? extends Object> parseAutoCompleteResponse(String response) {
                 CityModel[] places = null;
-
                 Gson gson = new Gson();
                 places = gson.fromJson(response, CityModel[].class);
                 ArrayList<CityModel> arrayList = new ArrayList<CityModel>(Arrays.asList(places));
