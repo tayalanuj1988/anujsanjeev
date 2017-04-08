@@ -19,7 +19,16 @@ android {
     }
 }
 
+repositories {
+    jcenter()
+    maven {
+        url 'http://dl.bintray.com/mobisystech/maven'
+    }
+}
+
 dependencies {
+    compile 'com.google.code.gson:gson:2.5'
+    compile 'com.mobisys.android:autocompleteview:1.2'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'

@@ -1,5 +1,8 @@
 package com.anujtayal.ixicode2017.bean;
 
+import com.anujtayal.ixicode2017.R;
+import com.mobisys.android.autocompleteview.annotations.ViewId;
+
 import java.io.Serializable;
 
 /**
@@ -17,6 +20,7 @@ public class CityModel implements Serializable
     private boolean en;
     private String st;
 
+    @ViewId(id= R.id.name)
     public String getText() {
         return text;
     }
