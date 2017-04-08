@@ -26,7 +26,7 @@ public class CityModel implements Serializable
     private boolean useNLP;
     private double lat;
     private double lon;
-    private Integer xid;
+    private String xid;
 
     @ViewId(id= R.id.name)
     public String getText() {
@@ -149,11 +149,11 @@ public class CityModel implements Serializable
         this.lon = lon;
     }
 
-    public Integer getXid() {
+    public String getXid() {
         return xid;
     }
 
-    public void setXid(Integer xid) {
+    public void setXid(String xid) {
         this.xid = xid;
     }
 }

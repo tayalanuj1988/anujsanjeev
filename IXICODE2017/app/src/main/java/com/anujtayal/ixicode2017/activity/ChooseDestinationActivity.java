@@ -1,5 +1,6 @@
 package com.anujtayal.ixicode2017.activity;
 
+import android.content.Intent;
 import android.content.IntentSender;
 import android.location.Address;
 import android.location.Geocoder;
@@ -82,6 +83,10 @@ public class ChooseDestinationActivity extends BaseActivity implements Connectio
                 CityModel place = (CityModel) obj;
                 ((com.mobisys.android.autocompleteview.AutoCompleteView) findViewById(R.id.auto_text_2)).setText(place.getText());
                 ((com.mobisys.android.autocompleteview.AutoCompleteView) findViewById(R.id.auto_text_2)).clearFocus();
+                Intent intent = new Intent(ChooseDestinationActivity.this, A2BRootsActivity.class);
+                intent.putExtra(AppConstant.ORIGINCITYID, srcCity.getXid());
+                intent.putExtra(AppConstant.DESTINATIONCITYID, place.getXid());
+                startActivity(intent);
             }
         });
     }

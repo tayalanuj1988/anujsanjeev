@@ -28,4 +28,7 @@ public interface AppConstant
 
 
     String API_1_FOR_SOURCE_LOCATION = "API_1_FOR_SOURCE_LOCATION";
+    String API_5_A2B = "API_5_A2B";
+    String ORIGINCITYID = "ORIGINCITYID";
+    String DESTINATIONCITYID = "DESTINATIONCITYID";
 }
