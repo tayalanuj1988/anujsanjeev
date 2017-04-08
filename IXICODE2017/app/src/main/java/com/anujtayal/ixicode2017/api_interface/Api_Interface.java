@@ -20,7 +20,7 @@ public interface Api_Interface {
     public void getListOfSuggestedCity(@Query("query") String query, Callback<ArrayList<CityModel>> response);
 
     @GET("/api/v3/namedentities/city/{cityId}/categories?apiKey=ixicode!2$")
-    public void getPointOfInterestedForACity(@Path("cityId") String entityId, @Query("type") String type, @Query("skip") String skip, @Query("limit") String limit, Callback<GetHotelData> response);
+    public void getPointOfInterestedForACity(@Path("cityId") String cityId, @Query("type") String type, @Query("skip") String skip, @Query("limit") String limit, Callback<GetHotelData> response);
 
     @GET("/api/v3/namedentities/id/{entityId}?apiKey=ixicode!2$")
     public void getEntityDetail(@Path("entityId") String entityId, Callback<GetEntityDetailModel> response);

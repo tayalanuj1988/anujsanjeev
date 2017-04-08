@@ -30,10 +30,10 @@ public class SplashActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         //callGetSuggestedCityListApi();
-        // callGetInterstedPointForCityListApi();
+         callGetInterstedPointForCityListApi();
        // callGetEntityDetailApi();
        // callGetRecommendedDestinationListApi();
-        callA2BApi();
+//        callA2BApi();
     }
 
 
@@ -69,11 +69,11 @@ public class SplashActivity extends AppCompatActivity
         //creating a service for adapter with our GET class
         Api_Interface git = restAdapter.create(Api_Interface.class);
 
-        git.getPointOfInterestedForACity("hotel","2","10",new Callback<GetHotelData>() {
+        git.getPointOfInterestedForACity("503b2a8ae4b032e338f12dc3","Places To Visit,Hotel,Things To Do", "1", "100", new Callback<GetHotelData>() {
             @Override
             public void success(GetHotelData list, Response response) {
                 //  Utils.cancelProgressDialog(mProgressDialog);
-                Toast.makeText(SplashActivity.this, "Status " , Toast.LENGTH_SHORT).show();
+                Toast.makeText(SplashActivity.this, "Status ", Toast.LENGTH_SHORT).show();
 
             }
 
