@@ -5,25 +5,52 @@ import java.util.ArrayList;
 
 /**
  * Created by sanjeev on 08/04/17.
+ * This class is basically representing the entity instead of Hotel
  */
 
-public class HotelModel implements Serializable
-{
+public class HotelModel implements Serializable {
     private String address;
-    private ArrayList<String> categoryNames;
+    private String[] categoryNames;
     private String cityName;
     private String countryName;
     private String description;
+    private String howToReach;
     private String cityId;
     private String xid;
     private String keyImageUrl;
+    private String whyToVisit;
     private Double latitude;
     private Double longitude;
     private String minimumPrice;
     private String name;
+    private String url;
     private String stateName;
     private String shortDescription;
     private String id;
+
+    public String getHowToReach() {
+        return howToReach;
+    }
+
+    public void setHowToReach(String howToReach) {
+        this.howToReach = howToReach;
+    }
+
+    public String getWhyToVisit() {
+        return whyToVisit;
+    }
+
+    public void setWhyToVisit(String whyToVisit) {
+        this.whyToVisit = whyToVisit;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public String getAddress() {
         return address;
@@ -33,11 +60,11 @@ public class HotelModel implements Serializable
         this.address = address;
     }
 
-    public ArrayList<String> getCategoryNames() {
+    public String[] getCategoryNames() {
         return categoryNames;
     }
 
-    public void setCategoryNames(ArrayList<String> categoryNames) {
+    public void setCategoryNames(String[] categoryNames) {
         this.categoryNames = categoryNames;
     }
 
