@@ -6,10 +6,13 @@ import android.widget.Toast;
 
 import com.anujtayal.ixicode2017.R;
 import com.anujtayal.ixicode2017.api_interface.Api_Interface;
+import com.anujtayal.ixicode2017.bean.A2BModel;
 import com.anujtayal.ixicode2017.bean.CityModel;
 import com.anujtayal.ixicode2017.bean.GetEntityDetailModel;
 import com.anujtayal.ixicode2017.bean.GetHotelData;
 import com.anujtayal.ixicode2017.bean.GetRecommondedDestinationModel;
+import com.anujtayal.ixicode2017.bean.GetA2BModel;
+
 import com.anujtayal.ixicode2017.utils.AppConstant;
 
 import java.util.ArrayList;
@@ -29,7 +32,8 @@ public class SplashActivity extends AppCompatActivity
         //callGetSuggestedCityListApi();
         // callGetInterstedPointForCityListApi();
        // callGetEntityDetailApi();
-        callGetRecommendedDestinationListApi();
+       // callGetRecommendedDestinationListApi();
+        callA2BApi();
     }
 
 
@@ -118,6 +122,33 @@ public class SplashActivity extends AppCompatActivity
         git.getRecommendedDestinationsList(new Callback<GetRecommondedDestinationModel>() {
             @Override
             public void success(GetRecommondedDestinationModel list, Response response) {
+                //  Utils.cancelProgressDialog(mProgressDialog);
+                Toast.makeText(SplashActivity.this, "Status " , Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void failure(RetrofitError error) {
+//                Utils.cancelProgressDialog(mProgressDialog);
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.error_message), Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+  //  GEThttp://build2.ixigo.com/api/v2/a2b/modes?apiKey=ixicode!2$&originCityId=1075798&destinationCityId=1075379
+
+    private void callA2BApi()
+    {
+        // mProgressDialog = Utils.showProgressDialog(this);
+        //create an adapter for retrofit with base url
+        RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint(AppConstant.BASE_URL).build();
+
+        //creating a service for adapter with our GET class
+        Api_Interface git = restAdapter.create(Api_Interface.class);
+
+        git.getA2BApiCall("1075798","1075379",new Callback<GetA2BModel>() {
+            @Override
+            public void success(GetA2BModel list, Response response) {
                 //  Utils.cancelProgressDialog(mProgressDialog);
                 Toast.makeText(SplashActivity.this, "Status " , Toast.LENGTH_SHORT).show();
 
