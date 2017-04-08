@@ -34,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
         //creating a service for adapter with our GET class
         Api_Interface git = restAdapter.create(Api_Interface.class);
 
-        git.getListOfSuggestedCity(new Callback<ArrayList<CityModel>>() {
+        git.getListOfSuggestedCity("mumbai",new Callback<ArrayList<CityModel>>() {
             @Override
             public void success(ArrayList<CityModel> list, Response response) {
                 //  Utils.cancelProgressDialog(mProgressDialog);
